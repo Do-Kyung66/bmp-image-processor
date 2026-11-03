@@ -1,0 +1,12 @@
+# Visual Studio
+.vs/
+*.user
+
+# 빌드 결과
+x64/
+Debug/
+Release/
+
+# 결과 이미지 (폴더는 유지)
+Output/*
+!Output/.gitkeep
