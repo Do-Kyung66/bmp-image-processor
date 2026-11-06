@@ -52,6 +52,7 @@ Logger                 로그 파일 기록
 
 # Thresholding
 .\x64\Release\ImageProcessor.exe --input .\Resource\4_text_page.bmp --output .\Output\4_text_page_threshold.bmp --filter threshold:128
+.\x64\Release\ImageProcessor.exe --input .\Resource\5_checkerboard.bmp --output .\Output\5_checkerboard_threshold.bmp --filter threshold:128
 
 # Blur
 .\x64\Release\ImageProcessor.exe --input .\Resource\3_chelsea_cat.bmp --output .\Output\3_chelsea_cat_blur.bmp --filter blur
@@ -69,8 +70,8 @@ Logger                 로그 파일 기록
 .\x64\Release\ImageProcessor.exe --input .\Resource\1_astronaut.bmp --output .\Output\1_astronaut_resize.bmp --filter resize:256:256
 
 # Flip (좌우 / 상하)
-.\x64\Release\ImageProcessor.exe --input .\Resource\5_checkerboard.bmp --output .\Output\5_checkerboard_flip_horizontal.bmp --filter flip:horizontal
-.\x64\Release\ImageProcessor.exe --input .\Resource\5_checkerboard.bmp --output .\Output\5_checkerboard_flip_vertical.bmp --filter flip:vertical
+.\x64\Release\ImageProcessor.exe --input .\Resource\1_astronaut.bmp --output .\Output\1_astronaut_flip_horizontal.bmp --filter flip:horizontal
+.\x64\Release\ImageProcessor.exe --input .\Resource\1_astronaut.bmp --output .\Output\1_astronaut_flip_vertical.bmp --filter flip:vertical
 ```
 
 ### 파이프라인, 로그, 멀티쓰레드
