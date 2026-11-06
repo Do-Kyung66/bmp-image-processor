@@ -24,6 +24,18 @@
 
   Visual Studio 2022에서 `ImageProcessor.sln`을 열고 **Release / x64**로 빌드합니다. 실행 파일은 `.\x64\Release\ImageProcessor.exe`에 만들어집니다.
 
+## 구조
+
+```text
+main.cpp               인자 파싱 → 이미지 로드 → 필터 생성(FilterFactory) → 적용 → 저장
+CommandLineParser      --input, --output, --filter, --pipeline, --log, --threads 해석
+FilterFactory          필터 이름 문자열 → FilterBase 객체 (createFilter, createPipeline)
+FilterBase             모든 필터의 추상 부모 클래스
+*Filter                각 알고리즘 구현
+PixelUtils.h           밝기 계산 공용 함수 (Grayscale, Threshold, Histogram에서 사용)
+Logger                 로그 파일 기록
+```
+
 ## 실행 명령어
 
 솔루션 폴더(`ImageProcessor.sln`이 있는 곳)에서 PowerShell로 실행합니다.
@@ -85,18 +97,6 @@
 
 # --filter와 --pipeline을 함께 지정 → 종료 코드 4
 .\x64\Release\ImageProcessor.exe -i .\Resource\1_astronaut.bmp -o .\Output\error.bmp -f blur -p "grayscale"
-```
-
-## 구조
-
-```text
-main.cpp               인자 파싱 → 이미지 로드 → 필터 생성(FilterFactory) → 적용 → 저장
-CommandLineParser      --input, --output, --filter, --pipeline, --log, --threads 해석
-FilterFactory          필터 이름 문자열 → FilterBase 객체 (createFilter, createPipeline)
-FilterBase             모든 필터의 추상 부모 클래스
-*Filter                각 알고리즘 구현
-PixelUtils.h           밝기 계산 공용 함수 (Grayscale, Threshold, Histogram에서 사용)
-Logger                 로그 파일 기록
 ```
 
 
