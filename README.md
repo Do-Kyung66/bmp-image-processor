@@ -83,7 +83,8 @@ Logger                 로그 파일 기록
 # 로그 파일
 .\x64\Release\ImageProcessor.exe --input .\Resource\1_astronaut.bmp --output .\Output\1_astronaut_pipeline.bmp --pipeline "crop:100:50:300:300, resize:600:600, sharpen" --log .\Output\run.log
 
-# 멀티쓰레드 (Blur/Sharpen, 쓰레드 4개)
+# 멀티쓰레드 비교 (Blur/Sharpen, 쓰레드 1개 / 4개) → run.log에서 blur 시간 비교
+.\x64\Release\ImageProcessor.exe --input .\Resource\1_astronaut.bmp --output .\Output\1_astronaut_blur_st.bmp --filter blur --threads 1 --log .\Output\run.log
 .\x64\Release\ImageProcessor.exe --input .\Resource\1_astronaut.bmp --output .\Output\1_astronaut_blur_mt.bmp --filter blur --threads 4 --log .\Output\run.log
 ```
 
