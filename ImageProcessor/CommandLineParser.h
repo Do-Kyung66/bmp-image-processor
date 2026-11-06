@@ -18,6 +18,9 @@ struct ProgramOptions {
     std::string inputPath;   ///< --input  / -i
     std::string outputPath;  ///< --output / -o
     std::string filterName;  ///< --filter / -f
+    std::string pipeline;    ///< --pipeline / -p
+    std::string logPath;     ///< --log / -l
+    int threadCount = 1;     ///< --threads / -t (Blur/Sharpen 병렬 처리)
 };
 
 class CommandLineParser {
