@@ -1,5 +1,8 @@
 # CLI 기반 이미지 처리 프로그램 구현
 
+## 과제 목표
+>CLI(Command Line Interface) 기반으로 동작한느 이미지 처리 도구를 완성합니다.
+
 ## 구현 항목
 
 ### 기본 요구사항
@@ -88,7 +91,7 @@
 
 ```text
 main.cpp               인자 파싱 → 이미지 로드 → 필터 생성(FilterFactory) → 적용 → 저장
-CommandLineParser      --input, --output, --filter, --pipeline, --log, --thread 해석
+CommandLineParser      --input, --output, --filter, --pipeline, --log, --threads 해석
 FilterFactory          필터 이름 문자열 → FilterBase 객체 (createFilter, createPipeline)
 FilterBase             모든 필터의 추상 부모 클래스
 *Filter                각 알고리즘 구현
