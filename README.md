@@ -1,7 +1,7 @@
 # CLI 기반 이미지 처리 프로그램 구현
 
 ## 과제 목표
->CLI(Command Line Interface) 기반으로 동작하는 이미지 처리 도구를 완성합니다.
+> CLI(Command Line Interface) 기반으로 동작하는 이미지 처리 도구를 완성합니다.
 
 ## 구현 항목
 
